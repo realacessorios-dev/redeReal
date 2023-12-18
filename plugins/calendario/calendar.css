@@ -1,0 +1,197 @@
+#calendar{
+   display: block;
+   overflow: hidden;
+   margin: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+
+
+   color: #546e7a;
+   background: #ffffff; /* Old browsers */
+   background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #cfcfcf 70%); /* FF3.6+ */
+   background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#cfcfcf 70%); /* Chrome10+,Safari5.1+ */
+
+   font-family: "museo500";
+}
+
+/* Title */
+#calendar .c-title
+{
+   position: relative;
+   width: 100%;
+   color: #ffffff;
+   background-color: #263238;
+   /*border: 1px solid #b74054;*/
+
+   /** Radius */
+   -webkit-border-top-left-radius: 2px;
+   -webkit-border-top-right-radius: 2px;
+   -moz-border-radius-topleft: 2px;
+   -moz-border-radius-topright: 2px;
+   border-top-left-radius: 2px;
+   border-top-right-radius: 2px;
+}
+#calendar .c-title .left-button{
+   cursor: pointer;
+   position: absolute;
+   left: 0px;
+   width: 32px;
+   text-align: center;
+   color: inherit;
+   padding: 12px 0 12px 0;
+}
+#calendar .c-title .title{
+   margin: 0 auto;
+   margin-left: 32px;
+   margin-right: 32px;
+   text-align: center;
+   color: inherit;
+   padding: 12px 0 12px 0;
+}
+#calendar .c-title .right-button
+{
+   cursor: pointer;
+   position: absolute;
+   right: 0px;
+   width: 32px;
+   text-align: center;
+   color: inherit;
+   padding: 12px 0 12px 0;
+}
+
+/* Mouse Events */
+#calendar .left-button:hover, #calendar .right-button:hover
+{
+   background: #e94e68;
+}
+#calendar .left-button:active, #calendar .right-button:active
+{
+   background: #e5526a;
+}
+
+/* Days Wrapper */
+#calendar .c-days
+{
+   width: 100%;
+   border-spacing: 0px;
+   border-collapse: separate;
+
+   border: 1px solid #c3c3c3;
+   border-top: none;
+   background: url(calendar.png) top center repeat-x;
+}
+#calendar .c-days thead th
+{
+   padding: 12px 0 12px 0;
+   width: 14.28%;
+   text-align: center;
+   font-size: 10px;
+   font-weight: normal;
+   color: #eb556e;
+}
+#calendar .c-days tbody tr td
+{
+   border-width: 1px 1px 0px 0px;
+   border-style: solid;
+   border-color: rgba(120, 120, 120, 0.05);
+}
+#calendar .c-days tbody tr td:last-child
+{
+   border-width: 1px 0px 0px 0px;
+   border-style: solid;
+   border-color: rgba(120, 120, 120, 0.05);
+}
+#calendar .c-days tbody tr:last-child td
+{
+   border-bottom: none;
+}
+#calendar .c-days tbody tr td > span
+{
+   display: block;
+   width: 100%;
+   padding: 6px 0 6px 0;
+   text-align: center;
+   /*text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);*/
+   color: #6c7174;
+   font-size: 14px;
+
+   border-top: 1px solid rgba(255, 255, 255, 0.05);
+   border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+#calendar .c-days tbody tr td.other-month > span
+{
+   color: #ced0d1;
+
+   border-top: 1px solid rgba(255, 255, 255, 0.05);
+   border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#calendar .c-days tbody tr td.today > span
+{
+   padding: 7px 0 1px 0;
+   border: none;
+   border-bottom: 5px solid#20ab75;
+   margin-bottom: 1px;
+   color: #000 !important;
+
+   cursor: default;
+}
+
+#calendar .c-days tbody tr td.sunday > span
+{
+   padding: 7px 0 1px 0;
+   color: #eb556e;
+}
+
+#calendar .c-days tbody tr td.mark > span
+{
+   padding: 7px 0 1px 0;
+   border: none;
+   border-bottom: 5px solid #6fd88d;
+   margin-bottom: 1px;
+}
+
+#calendar .c-days tbody tr td.mark-blue > span{
+   padding: 7px 0 1px 0;
+   border: none;
+   border-bottom: 5px solid #55bbeb;
+   margin-bottom: 1px;
+}
+#calendar .c-days tbody tr td.mark-red > span{
+   padding: 7px 0 1px 0;
+   border: none;
+   border-bottom: 5px solid#d00000;
+   margin-bottom: 1px;
+}
+
+#calendar .c-days tbody tr td:hover
+{
+   background-color: #f0f0f0;
+   cursor: pointer;
+}
+/**
+ *  END FREEBIE STYLES
+ */
+
+#pnFeriados{
+   padding: 5px;
+   color: #ffffff;
+}
+
+
+#pnMenuCalendario{
+   height: 100%;
+   position:fixed;
+   width: 300px;
+   left: -310px;
+   top:0px;
+   background-color: #546e7a;
+   z-index: 1000;
+   box-shadow: 10px 0px 13px -8px rgba(0,0,0,0.68);
+   transition: all 0.5s cubic-bezier(0.61,-0.12, 0.34, 1.16);
+}
+
+.pnMenuCalendariotToggle{
+   left: 0!important;
+}

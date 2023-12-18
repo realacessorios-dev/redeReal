@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+  <head>
+    <title>Calc</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="calculadoraXico.css" rel="stylesheet" type="text/css"/>-->
+    <link href="calculadoraXicoDark.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <body>
+    <button onclick="calculadoraXico.criaCalcParaModal();">Cria Modal (UI como dependência)</button>
+    <button onclick="calculadoraXico.openModal();">Open Modal (UI como dependência)</button>
+
+    <button onclick="calculadoraXico.criaCalcMenuRight();">Cria Right</button>
+    <button onclick="calculadoraXico.openCalcRight();">Open Right</button>
+
+    <button onclick="calculadoraXico.criaCalcMenuLeft();">Cria Left</button>
+    <button onclick="calculadoraXico.openCalcLeft();">Open Left</button>
+
+    <button onclick="calculadoraXico.criaCalcDestino('#calc');">Div Destino</button>
+    <button onclick="calculadoraXico.ativaKey();">Ativa Key</button>
+    <button onclick="calculadoraXico.desativaKey();">Desativa Key</button>
+
+    <div id="calc"></div>
+    <script src="../../js/jquery-2.2.1.min.js" type="text/javascript"></script>
+
+    <script src="calculadoraXico-2.0.js" type="text/javascript"></script>
+
+    <script>
+      calculadoraXico.criaCalcMenuRight();
+      setTimeout(function () {
+        calculadoraXico.openCalcRight();
+      }, 100);
+
+    </script>
+
+
+  </body>
+</html>

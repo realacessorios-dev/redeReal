@@ -1,0 +1,78 @@
+.mofo-modal-main {
+
+  padding: .2em;
+  /*outline: 0;*/
+  border: 1px solid #aaaaaa;
+  background: #f3f3f3 url("images/mofo-bg-content.png") 50% 50% repeat;
+  color: #222222;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.mofo-modal-head {
+  background: #00ccff;
+  padding: .4em 1em;
+  border: 1px solid #367fa9;
+  background: #3c8dbc;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.mofo-button-new{
+  border-radius: 4px;
+  padding: .4em 1em;
+  border: 1px solid #367fa9;
+  background: #3c8dbc;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.mofo-button-close{
+  border-radius: 50%;
+  padding: .4em 1em;
+  border: 1px solid #367fa9;
+  background: #3c8dbc;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.mofo-button-new:focus, .mofo-button-close:focus {
+  border: 1px solid #333333;
+}
+
+.mofo-button-new:hover, .mofo-button-close:hover{
+  background: #3680ab;
+}
+
+.mofo-button-new, .mofo-button-close,
+.mofo-button-new:link, .mofo-button-close:link,
+.mofo-button-new:visited, .mofo-button-close:visited,
+.mofo-button-new:active, .mofo-button-close:active {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.mofo-modal-content{
+  margin: 2px 0 2px;
+  border: 0;
+  /*padding: .5em .5em;*/
+  padding: 5px 10px 5px 5px;
+  background: none;
+
+}
+
+.mofo-modal-foot {
+  height: 30px;
+  text-align: right;
+  background-image: none;
+
+  padding: .7em .8em .5em .4em;
+  border-top: 1px solid #aaaaaa;
+  max-height: 55px;
+}
+
+.mofo-widget-overlay {
+  background: #aaaaaa url("images/mofo-bg-modal.png") 50% 50% repeat;
+  opacity: .4;
+}

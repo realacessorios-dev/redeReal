@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modo Exemplos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="mofo.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/jquery-2.2.1.min.js" type="text/javascript"></script>
+    <script src="mofo.js" type="text/javascript"></script>
+    <link href="../css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <style>
+      i{
+        font-weight: bold;
+      }
+      p{
+        color: red;
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <i>Basico</i>
+    <p>$('#pnBasic').mofo();</p>
+    <div id="pnBasic"></div>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 2</i>
+    <p>$('#exemplo2').mofo('open');</p>
+    <div id="exemplo2" title="Exemp 2"></div>
+    <button onclick="exemplo2();">Exemplo 2</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 3</i>
+    <p>autoOpen: false,
+      title: 'Exemple 3'
+    </p>
+    <div id="exemplo3"></div>
+    <button onclick="exemplo3();">Exemplo 3</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 4</i>
+    <p>             autoOpen: false,
+      title: 'Exemple 4',
+      width: 350,
+      height: 180
+    </p>
+    <div id="exemplo4"></div>
+    <button onclick="exemplo4();">Exemplo 4</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 5</i>
+    <p>left: 50,
+      top: 180
+    </p>
+    <div id="exemplo5"></div>
+    <button onclick="exemplo5();">Exemplo 5</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 6</i>
+    <p>closeBtn: false
+    </p>
+    <div id="exemplo6"></div>
+    <button onclick="exemplo6();">Exemplo 6</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 7</i>
+    <p>
+      fullscreen:true
+    </p>
+    <div id="exemplo7"></div>
+    <button onclick="exemplo7();">Exemplo 7</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 8</i>
+    <p>
+      buttons: {
+      OK: function () {
+      $('#exemplo8').mofo('close');
+      }
+      }
+    </p>
+    <div id="exemplo8"></div>
+    <button onclick="exemplo8();">Exemplo 8</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 9</i>
+    <p>
+      execAfter: {time:10:btn1},
+      buttons: {
+      OK: function () {
+      alert('ok');
+      },
+      'NÃO': function () {
+      $('#exemplo9').mofo('close');
+      }
+      }
+    </p>
+    <div id="exemplo9"></div>
+    <button onclick="exemplo9();">Exemplo 9</button>
+    <p>-----------------------------------------------</p>
+
+    <i>Exemplo 10</i>
+    <p>
+      keyDown: {
+      F1: {
+      key: 112,
+      call: function () {
+      alert('F1 ativado');
+      }
+      },
+      CTRL_P: {
+      key: 'ctrl+80',
+      call: function () {
+      alert('ctrl+P ativado');
+      }
+      }
+      }
+    </p>
+    <div id="exemplo10">pressione F1 <br> ctrl+P</div>
+    <button onclick="exemplo10();">Exemplo 10</button>
+    <p>-----------------------------------------------</p>
+
+    <script>
+
+      $(function () {
+        //$('#pnBasic').mofo();
+
+        $(document).keydown(function (e) {
+          if (!mofoControl.getModalHasOpen()) {
+            if (e.keyCode === 112) {
+              alert('asfasdf');
+            }
+          }
+
+        });
+
+
+
+        $('#exemplo2').mofo({
+          autoOpen: false,
+          modal: false,
+          width: 400,
+          height: 200
+        });
+        $('#exemplo3').mofo({
+          autoOpen: false,
+          title: 'Exemple 3'
+        });
+        $('#exemplo4').mofo({
+          autoOpen: false,
+          title: 'Exemple 4',
+          width: 350,
+          height: 180
+        });
+        $('#exemplo5').mofo({
+          autoOpen: false,
+          title: 'Exemple 5',
+          left: 50,
+          top: 180
+        });
+        $('#exemplo6').mofo({
+          autoOpen: false,
+          title: 'Exemple 5',
+          closeBtn: false
+        });
+        $('#exemplo7').mofo({
+          autoOpen: false,
+          title: 'Exemple 7',
+          fullscreen: true
+        });
+        $('#exemplo8').mofo({
+          autoOpen: false,
+          title: 'Exemple 8',
+          buttons: {
+            OK: function () {
+              $('#exemplo8').mofo('close');
+            },
+            OKAA: {
+              click: function () {
+                console.log('asdf');
+              },
+              html: 'New Button',
+              style: 'float:left',
+              id: 'meuID'
+            }
+          }
+        });
+
+        $('#exemplo9').mofo({
+          autoOpen: false,
+          title: 'Exemple 9',
+          execAfter: {time: 15, btn: 3},
+          buttons: {
+            OK: function () {
+              alert('ok');
+            },
+            'NÃO': function () {
+              $('#exemplo9').mofo('close');
+            },
+            AutoClose: function () {
+              $('#exemplo9').mofo('close');
+              // $('#exemplo9').mofo('btnFocus','1');
+            },
+            Salvar: {
+              html: '<i class="fa fa-trash"></i> Salvar',
+              click: function () {
+                alert('asdf');
+              }
+            }
+          }
+        });
+
+
+        $('#exemplo10').mofo({
+          autoOpen: false,
+          title: 'Exemple 10',
+          keyDown: {
+            F1: {
+              key: 112,
+              call: function () {
+                alert('F1 ativado');
+              }
+            },
+            CTRL_P: {
+              key: 'ctrl+80',
+              call: function () {
+                alert('ctrl+P ativado');
+              }
+            }
+          }
+
+        });
+      });
+
+      function exemplo2() {
+        $('#exemplo2').mofo('open');
+      }
+      function exemplo3() {
+        $('#exemplo3').mofo('open');
+      }
+      function exemplo4() {
+        $('#exemplo4').mofo('open');
+      }
+      function exemplo5() {
+        $('#exemplo5').mofo('open');
+      }
+      function exemplo6() {
+        $('#exemplo6').mofo('open');
+      }
+      function exemplo7() {
+        $('#exemplo7').mofo('open');
+      }
+      function exemplo8() {
+        $('#exemplo8').mofo('open');
+      }
+      function exemplo9() {
+        $('#exemplo9').mofo('open');
+      }
+      function exemplo10() {
+        $('#exemplo10').mofo('open');
+      }
+
+    </script>
+
+
+
+
+  </body>
+</html>

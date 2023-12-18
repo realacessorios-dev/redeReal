@@ -1,0 +1,45 @@
+#pnPrincipal {
+  /*margin: 0 auto !important;*/
+  /*position: relative !important;*/
+  /*min-height: 90px !important;*/
+  border: 1px solid #A8A8A8 !important;
+  /*padding: 5px 5px 5px 5px !important;*/
+  /*border-radius: 4px !important;*/ 
+  /*box-shadow: 2px 2px 3px #A8A8A8 !important;*/
+  background: #eeeeee !important;
+  /*margin: 5px !important;*/
+}
+
+.container {
+
+  margin-left: 8px!important;
+  margin-right: 8px!important;
+  width: 95%;
+}
+
+#SelectLoja{
+  height: 32px!important;
+  width: 95% !important;
+}
+
+#edtFinal, #edtInicial{
+  height: 25px!important;
+  margin-bottom: 11px!important;  
+}
+
+#pnLojas{
+  height: 60px;
+}
+
+.table td{
+  font-size: 10px !important;
+  padding: 7px 3px 7px 2px !important;
+}
+
+.table{
+  margin: 0 !important;
+}
+
+.nova{
+  margin-right: 10px;
+}

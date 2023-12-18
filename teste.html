@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-2.2.1.min.js" type="text/javascript"></script>
+
+
+
+    </head>
+    <body>
+        <div style="text-align: center">
+            <input type="text" style="text-align: right" id="edtLocProdutoResumo" value='ZN1414'>
+            <div style="margin-left: 600px;" class="table pnRcotadores"><table id="table1889"><tbody><tr><th colspan="2">JOVEM CAR (APVE)<span id="spL1889"></span></th></tr><tr><td colspan="2"><div class="right-align" id="pnVl1889">12.721,49</div></td></tr><tr class="itenGanho" cod_produto="25536" id="pganho255361889"><td>ZN1414275</td><td>4</td></tr><tr class="itenGanho" cod_produto="25538" id="pganho255381889"><td>ZN1414281</td><td>4</td></tr><tr class="itenGanho" cod_produto="23456" id="pganho234561889"><td>ZN1414056</td><td>2</td></tr><tr class="itenGanho" cod_produto="25644" id="pganho256441889"><td>ZN555001</td><td>5</td></tr><tr class="itenGanho" cod_produto="30643" id="pganho306431889"><td>ZN14141319</td><td>4</td></tr><tr class="itenGanho" cod_produto="30642" id="pganho306421889"><td>ZN14141318</td><td>4</td></tr><tr class="itenGanho" cod_produto="30526" id="pganho305261889"><td>ZN14141063</td><td>4</td></tr><tr class="itenGanho" cod_produto="30525" id="pganho305251889"><td>ZN14141062</td><td>4</td></tr><tr class="itenGanho" cod_produto="30862" id="pganho308621889"><td>ZN1414525</td><td>4</td></tr><tr class="itenGanho" cod_produto="30694" id="pganho306941889"><td>ZN1919012</td><td>2</td></tr><tr class="itenGanho" cod_produto="26155" id="pganho261551889"><td>ZN222008</td><td>6</td></tr><tr class="itenGanho" cod_produto="23629" id="pganho236291889"><td>ZN14141384</td><td>8</td></tr><tr class="itenGanho" cod_produto="26154" id="pganho261541889"><td>ZN222007</td><td>5</td></tr><tr class="itenGanho" cod_produto="29113" id="pganho291131889"><td>ZN555033</td><td>3</td></tr><tr class="itenGanho" cod_produto="26715" id="pganho267151889"><td>ZN1414212</td><td>3</td></tr><tr class="itenGanho" cod_produto="16359" id="pganho163591889"><td>ZN1111004</td><td>4</td></tr><tr class="itenGanho" cod_produto="16357" id="pganho163571889"><td>ZN1111002</td><td>6</td></tr><tr class="itenGanho" cod_produto="16358" id="pganho163581889"><td>ZN1111003</td><td>4</td></tr><tr class="itenGanho" cod_produto="45001" id="pganho450011889"><td>24495</td><td>2</td></tr><tr class="itenGanho" cod_produto="45000" id="pganho450001889"><td>24494</td><td>2</td></tr><tr class="itenGanho" cod_produto="30496" id="pganho304961889"><td>ZN111130</td><td>2</td></tr><tr class="itenGanho" cod_produto="29467" id="pganho294671889"><td>ZN111406</td><td>2</td></tr><tr class="itenGanho" cod_produto="30517" id="pganho305171889"><td>ZN14141130</td><td>4</td></tr><tr class="itenGanho" cod_produto="25635" id="pganho256351889"><td>ZN555042</td><td>4</td></tr><tr class="itenGanho" cod_produto="25634" id="pganho256341889"><td>ZN555041</td><td>4</td></tr><tr class="itenGanho" cod_produto="36765" id="pganho367651889"><td>ZN222119</td><td>2</td></tr><tr class="itenGanho" cod_produto="18084" id="pganho180841889"><td>ZN3131001</td><td>2</td></tr><tr class="itenGanho" cod_produto="29686" id="pganho296861889"><td>ZN1414855</td><td>2</td></tr><tr class="itenGanho" cod_produto="32227" id="pganho322271889"><td>ZN1616028</td><td>30</td></tr><tr class="itenGanho" cod_produto="32226" id="pganho322261889"><td>ZN1616027</td><td>30</td></tr><tr class="itenGanho" cod_produto="32211" id="pganho322111889"><td>ZN1616070</td><td>2</td></tr><tr class="itenGanho" cod_produto="44954" id="pganho449541889"><td>23621</td><td>2</td></tr><tr class="itenGanho" cod_produto="22205" id="pganho222051889"><td>ZN444998</td><td>2</td></tr><tr class="itenGanho" cod_produto="29013" id="pganho290131889"><td>ZN1414557</td><td>2</td></tr><tr class="itenGanho" cod_produto="29012" id="pganho290121889"><td>ZN1414556</td><td>5</td></tr><tr class="itenGanho" cod_produto="30491" id="pganho304911889"><td>ZN14141124</td><td>2</td></tr></tbody></table></div>
+        </div>
+
+        <script>
+            $(function () {
+
+//                $(".itenGanho").each(function () {
+//                    var resultado = $(this).text();
+//                    console.log(resultado);
+//
+//                    console.log($(this).parent().show());
+//                });
+
+
+
+
+                $(document).on('keydown', '#edtLocProdutoResumo', function (e) {
+                    if (e.keyCode == 13) {
+
+                        var texto = $(this).val();
+
+                        $(".itenGanho").each(function () {
+                          var resultado = $(this).text().toUpperCase();
+                            //var resultado = $(this).text();
+
+                            if (resultado.indexOf(texto.toUpperCase()) == 0)
+                                $(this).show();
+                            else
+                                $(this).hide();
+                        });
+
+                    }
+                });
+            })
+        </script>
+
+
+    </body>
+</html>
